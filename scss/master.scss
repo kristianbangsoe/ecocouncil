@@ -1,0 +1,24 @@
+/*
+stylesheets/
+--modules/
+  --all.scss            #include to get all modules
+  --ultility.scss       #module name
+--partials/
+  -- _base.scss         #imports for mixins + global project variables
+  -- _colors_fonts.scss #typography and color variables
+  -- _reset.scss        #reset
+--master.scss           #sass file that imports all modules and partials
+*/
+
+/*
+Modules
+*/
+@import "modules/all";
+
+/*
+Partials
+*/
+@import "partials/reset";
+@import "partials/colors_fonts";
+@import "partials/base";
+@import "partials/header";
