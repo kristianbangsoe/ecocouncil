@@ -1,0 +1,61 @@
+/******* Colors and Fonts styles *******/
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+/* Colors */
+$mainGreen: #73A556;
+$secondaryGreen: #44883D;
+$mainBlue: #0062A3;
+$secondaryBlue: #1FBBA5;
+@mixin linear-gradient($start-color: $mainGreen, $end-color: $secondaryGreen, $start-percent: 0%, $end-percent: 100%) {
+  background-image: -webkit-linear-gradient($start-color $start-percent, $end-color $end-percent); // Safari 5.1-6, Chrome 10+
+  background-image: -o-linear-gradient($start-color $start-percent, $end-color $end-percent); // Opera 12
+  background-image: linear-gradient($start-color $start-percent, $end-color $end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+}
+/* Fonts */
+@mixin crimson-text($size, $weight, $lh, $caps) {
+  font-family: 'Crimson Text', serif;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lh;
+  text-transform: $caps;
+}
+@mixin open-sans($size, $weight, $lh, $caps) {
+  font-family: 'Open Sans', serif;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lh;
+  text-transform: $caps;
+}
+@mixin paragraph($size, $weight, $lh, $caps) {
+  font-family: 'Open Sans', serif;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lh;
+  text-transform: $caps;
+}
+/* Headings */
+h1 {
+  @include crimson-text(44px, 700, 60px, none);
+}
+h2 {
+  @include crimson-text(32px, 700, auto, none);
+}
+h3 {
+  @include open-sans(20px, 700, auto, uppercase);
+}
+h3 {
+  @include open-sans(18px, normal, auto, uppercase);
+}
+.caption-1 {
+  @include crimson-text(20px, 700, auto, none);
+}
+.caption-2 {
+  @include open-sans(18px, 700, auto, none);
+}
+/* Paragraph */
+.bold-p {
+  @include paragraph(20px, 600, 30px, none);
+}
+p {
+  @include paragraph(18px, 500, 30px, none);
+}

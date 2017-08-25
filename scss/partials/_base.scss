@@ -1,0 +1,18 @@
+/* Button styles */
+@mixin cta-btn($bgColor, $hover) {
+  background-color: $bgColor;
+  &:hover {
+    background-color: $hover;
+    transition: all 0.3 ease;
+  }
+}
+.btn {
+  color: #fff;
+  @include cta-btn()
+}
+
+/* Basics */
+body {
+  width: 100%;
+  height: 100vh;
+}
